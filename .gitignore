@@ -1,0 +1,6 @@
+*.log
+./downloads/
+.vscode/
+__pycache__/
+*.pyc
+.env
