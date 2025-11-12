@@ -1,6 +1,6 @@
-# MinIO Backup Downloader
+# S3 Backup Downloader
 
-A Python script to automatically download recent database backups from MinIO object storage.
+A Python script to automatically download recent database backups from s3 object storage.
 
 ## Features
 
@@ -55,7 +55,7 @@ DOWNLOAD_DIR = "./downloads"
 crontab -e
 
 # Add this line (adjust paths accordingly)
-0 2 * * * /usr/local/bin/uv run /path/to/main.py >> /var/log/minio_backup.log 2>&1
+0 2 * * * /usr/local/bin/uv run /path/to/main.py
 ```
 
 ## Logging
@@ -63,5 +63,4 @@ crontab -e
 The script generates two types of logs:
 
 - **Console output**: Real-time progress, can be disable by commenting out the `StreamHandler` in the logging setup.
-- **File**: `minio_download.log` in the script directory
-
+- **File**: `s3_download.log` in the script directory
